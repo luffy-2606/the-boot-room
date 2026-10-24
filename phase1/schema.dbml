@@ -1,0 +1,126 @@
+// The Boot Room — Star Schema (dbdiagram.io)
+// Paste into dbdiagram.io to render and export the diagram.
+
+Table dim_season {
+  season_key int [pk]
+  season_id int [unique]
+  season_name varchar
+  competition_id int
+  competition_name varchar
+  country_name varchar
+}
+
+Table dim_date {
+  date_key int [pk]
+  full_date date [unique]
+  year smallint
+  quarter smallint
+  month smallint
+  month_name varchar
+  day_of_month smallint
+  day_of_week smallint
+  day_name varchar
+  is_weekend boolean
+}
+
+Table dim_team {
+  team_key int [pk]
+  team_id int [unique]
+  team_name varchar
+  team_short_name varchar
+  country_name varchar
+}
+
+Table dim_player {
+  player_key int [pk]
+  player_id int [unique]
+  player_name varchar
+  position varchar
+  nationality varchar
+}
+
+Table dim_venue {
+  venue_key int [pk]
+  stadium_name varchar [unique]
+  city varchar
+  country_name varchar
+}
+
+Table dim_match {
+  match_key int [pk]
+  match_id int [unique]
+  match_date date
+  kick_off time
+  match_week smallint
+  competition_stage varchar
+  home_score smallint
+  away_score smallint
+  referee varchar
+  season_key int [ref: > dim_season.season_key]
+  home_team_key int [ref: > dim_team.team_key]
+  away_team_key int [ref: > dim_team.team_key]
+  venue_key int [ref: > dim_venue.venue_key]
+}
+
+Table fact_player_match {
+  player_key int [ref: > dim_player.player_key]
+  match_key int [ref: > dim_match.match_key]
+  team_key int [ref: > dim_team.team_key]
+  season_key int [ref: > dim_season.season_key]
+  date_key int [ref: > dim_date.date_key]
+  position varchar
+  minutes_played smallint
+  goals smallint
+  assists smallint
+  shots smallint
+  shots_on_target smallint
+  key_passes smallint
+  passes_completed smallint
+  passes_attempted smallint
+  xg decimal(6,3)
+  tackles smallint
+  interceptions smallint
+  yellow_cards smallint
+  red_cards smallint
+  fouls_committed smallint
+  fouls_won smallint
+
+  Indexes {
+    (player_key, match_key) [pk]
+  }
+}
+
+Table fact_league_standing {
+  team_key int [ref: > dim_team.team_key]
+  season_key int [ref: > dim_season.season_key]
+  date_key int [ref: > dim_date.date_key]
+  matchday smallint
+  position smallint
+  points smallint
+  games_played smallint
+  games_won smallint
+  games_drawn smallint
+  games_lost smallint
+  goals_for smallint
+  goals_against smallint
+  goal_difference smallint
+  form_last_5 varchar
+
+  Indexes {
+    (team_key, season_key, matchday) [pk]
+  }
+}
+
+Table fact_matchday_squad {
+  player_key int [ref: > dim_player.player_key]
+  match_key int [ref: > dim_match.match_key]
+  team_key int [ref: > dim_team.team_key]
+  season_key int [ref: > dim_season.season_key]
+  date_key int [ref: > dim_date.date_key]
+  is_starter boolean
+  jersey_number smallint
+
+  Indexes {
+    (player_key, match_key) [pk]
+  }
+}
