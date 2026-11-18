@@ -90,7 +90,7 @@ CREATE TABLE project_staging.stg_player (
     player_nickname     VARCHAR(200),
     jersey_number       VARCHAR(10),
     position            VARCHAR(50),
-    country_name        VARCHAR(100),   -- nationality
+    nationality         VARCHAR(100)
     team_id             VARCHAR(20),
     match_id            VARCHAR(20),
     _loaded_at          TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -141,6 +141,34 @@ CREATE TABLE project_staging.stg_event (
     carry_end_location  VARCHAR(100),
     _loaded_at          TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     _source_file        VARCHAR(300)
+);
+
+-- ─────────────────────────────────────────
+-- stg_player_match_summary  (one row = one player per match)
+-- ─────────────────────────────────────────
+DROP TABLE IF EXISTS project_staging.stg_player_match_summary CASCADE;
+CREATE TABLE project_staging.stg_player_match_summary (
+    match_id            VARCHAR(20),
+    team_id             VARCHAR(20),
+    player_id           VARCHAR(20),
+    player_name         VARCHAR(200),
+    position_played     VARCHAR(50),
+    minutes_played      VARCHAR(10),
+    goals               VARCHAR(10),
+    assists             VARCHAR(10),
+    shots               VARCHAR(10),
+    shots_on_target     VARCHAR(10),
+    key_passes          VARCHAR(10),
+    passes_completed    VARCHAR(10),
+    passes_attempted    VARCHAR(10),
+    xg                  VARCHAR(20),
+    tackles             VARCHAR(10),
+    interceptions       VARCHAR(10),
+    yellow_cards        VARCHAR(10),
+    red_cards           VARCHAR(10),
+    fouls_committed     VARCHAR(10),
+    fouls_won           VARCHAR(10),
+    _loaded_at          TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 -- ─────────────────────────────────────────

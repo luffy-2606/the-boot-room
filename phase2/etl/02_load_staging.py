@@ -27,7 +27,6 @@ import csv
 import io
 import os
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 
 try:
@@ -146,12 +145,14 @@ def _ensure_dq_log(conn) -> None:
     with conn.cursor() as cur:
         cur.execute("""
             CREATE TABLE IF NOT EXISTS project_staging.stg_dq_log (
-                id           SERIAL PRIMARY KEY,
-                table_name   VARCHAR(120),
-                row_number   INTEGER,
-                issue        TEXT,
-                raw_data     TEXT,
-                logged_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                log_id       SERIAL PRIMARY KEY,
+                table_name   VARCHAR(100),
+                check_name   VARCHAR(200),
+                check_result VARCHAR(20),
+                rows_checked INTEGER,
+                rows_failed  INTEGER,
+                detail       TEXT,
+                checked_at   TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             );
         """)
     conn.commit()
@@ -164,11 +165,11 @@ def log_dq_issue(conn, table_name: str, row_number: int,
         cur.execute(
             """
             INSERT INTO project_staging.stg_dq_log
-                (table_name, row_number, issue, raw_data, logged_at)
-            VALUES (%s, %s, %s, %s, %s)
+                (table_name, check_name, check_result, rows_checked, rows_failed, detail)
+            VALUES (%s, %s, %s, %s, %s, %s)
             """,
-            (table_name, row_number, issue, raw_data,
-             datetime.now(tz=timezone.utc)),
+            (table_name, "staging_load_error", "FAIL", 1, 1,
+             f"row {row_number}: {issue} | raw: {raw_data}"),
         )
     conn.commit()
 
