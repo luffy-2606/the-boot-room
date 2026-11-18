@@ -1,0 +1,10 @@
+competition_id,competition_name,country_name,competition_gender,competition_youth,competition_international
+9,1. Bundesliga,Germany,male,false,false
+16,Champions League,Europe,male,false,false
+223,Copa America,South America,male,false,true
+43,FIFA World Cup,International,male,false,true
+11,La Liga,Spain,male,false,false
+7,Ligue 1,France,male,false,false
+2,Premier League,England,male,false,false
+12,Serie A,Italy,male,false,false
+55,UEFA Euro,Europe,male,false,true

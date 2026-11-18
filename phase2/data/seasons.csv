@@ -1,0 +1,57 @@
+season_id,season_name,competition_id,competition_name,country_name
+281,2023/2024,9,1. Bundesliga,Germany
+27,2015/2016,9,1. Bundesliga,Germany
+4,2018/2019,16,Champions League,Europe
+1,2017/2018,16,Champions League,Europe
+2,2016/2017,16,Champions League,Europe
+27,2015/2016,16,Champions League,Europe
+26,2014/2015,16,Champions League,Europe
+25,2013/2014,16,Champions League,Europe
+24,2012/2013,16,Champions League,Europe
+23,2011/2012,16,Champions League,Europe
+22,2010/2011,16,Champions League,Europe
+21,2009/2010,16,Champions League,Europe
+41,2008/2009,16,Champions League,Europe
+39,2006/2007,16,Champions League,Europe
+37,2004/2005,16,Champions League,Europe
+44,2003/2004,16,Champions League,Europe
+76,1999/2000,16,Champions League,Europe
+277,1972/1973,16,Champions League,Europe
+71,1971/1972,16,Champions League,Europe
+276,1970/1971,16,Champions League,Europe
+282,2024,223,Copa America,South America
+106,2022,43,FIFA World Cup,International
+3,2018,43,FIFA World Cup,International
+55,1990,43,FIFA World Cup,International
+54,1986,43,FIFA World Cup,International
+51,1974,43,FIFA World Cup,International
+272,1970,43,FIFA World Cup,International
+270,1962,43,FIFA World Cup,International
+269,1958,43,FIFA World Cup,International
+90,2020/2021,11,La Liga,Spain
+42,2019/2020,11,La Liga,Spain
+4,2018/2019,11,La Liga,Spain
+1,2017/2018,11,La Liga,Spain
+2,2016/2017,11,La Liga,Spain
+27,2015/2016,11,La Liga,Spain
+26,2014/2015,11,La Liga,Spain
+25,2013/2014,11,La Liga,Spain
+24,2012/2013,11,La Liga,Spain
+23,2011/2012,11,La Liga,Spain
+22,2010/2011,11,La Liga,Spain
+21,2009/2010,11,La Liga,Spain
+41,2008/2009,11,La Liga,Spain
+40,2007/2008,11,La Liga,Spain
+39,2006/2007,11,La Liga,Spain
+38,2005/2006,11,La Liga,Spain
+37,2004/2005,11,La Liga,Spain
+278,1973/1974,11,La Liga,Spain
+235,2022/2023,7,Ligue 1,France
+108,2021/2022,7,Ligue 1,France
+27,2015/2016,7,Ligue 1,France
+27,2015/2016,2,Premier League,England
+44,2003/2004,2,Premier League,England
+27,2015/2016,12,Serie A,Italy
+86,1986/1987,12,Serie A,Italy
+282,2024,55,UEFA Euro,Europe
+43,2020,55,UEFA Euro,Europe

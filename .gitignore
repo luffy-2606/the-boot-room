@@ -15,7 +15,7 @@ Thumbs.db
 .idea/
 
 # Raw data — StatsBomb Open Data JSON is fetched into data/, kept out of git
-data/
+
 raw/
 *.json.gz
 *.zip
