@@ -33,7 +33,7 @@ BEGIN
 
     -- =========================================================================
     -- 1. dim_date
-    -- Builds a complete date spine from 2010-01-01 to 2030-12-31 using
+    -- Builds a complete date spine from 1950-01-01 to 2030-12-31 using
     -- generate_series. No staging dependency; purely computed.
     -- ON CONFLICT DO NOTHING makes this re-runnable safely.
     -- =========================================================================
@@ -73,7 +73,7 @@ BEGIN
             )
         )                                                               AS is_leap_year
     FROM generate_series(
-        '2010-01-01'::DATE,
+        '1950-01-01'::DATE,
         '2030-12-31'::DATE,
         '1 day'::INTERVAL
     ) AS gs(d)
@@ -116,7 +116,7 @@ BEGIN
            ON s.competition_id = c.competition_id
     WHERE s.season_id IS NOT NULL
       AND s.season_id != ''
-    ON CONFLICT (season_id) DO UPDATE SET
+    ON CONFLICT (competition_id, season_id) DO UPDATE SET
         season_name  = EXCLUDED.season_name,
         _updated_at  = CURRENT_TIMESTAMP;
 
@@ -259,7 +259,8 @@ BEGIN
     FROM project_staging.stg_match sm
     -- Resolve season surrogate key
     JOIN project_dw.dim_season ds
-      ON ds.season_id = CAST(sm.season_id AS INTEGER)
+      ON ds.competition_id = CAST(sm.competition_id AS INTEGER)
+     AND ds.season_id      = CAST(sm.season_id AS INTEGER)
     -- Resolve home-team surrogate key
     JOIN project_dw.dim_team dht
       ON dht.team_id  = CAST(sm.home_team_id AS INTEGER)

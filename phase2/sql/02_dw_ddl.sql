@@ -43,7 +43,7 @@ COMMENT ON COLUMN project_dw.dim_date.date_key IS 'Surrogate key: YYYYMMDD integ
 DROP TABLE IF EXISTS project_dw.dim_season CASCADE;
 CREATE TABLE project_dw.dim_season (
     season_key          SERIAL          PRIMARY KEY,
-    season_id           INTEGER         NOT NULL UNIQUE,  -- business key
+    season_id           INTEGER         NOT NULL,  -- business key (unique per competition)
     season_name         VARCHAR(50)     NOT NULL,
     competition_id      INTEGER         NOT NULL,
     competition_name    VARCHAR(200)    NOT NULL,
@@ -52,7 +52,8 @@ CREATE TABLE project_dw.dim_season (
     is_youth            BOOLEAN         NOT NULL DEFAULT FALSE,
     is_international    BOOLEAN         NOT NULL DEFAULT FALSE,
     _inserted_at        TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    _updated_at         TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP
+    _updated_at         TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT uq_season_competition UNIQUE (competition_id, season_id)
 );
 
 COMMENT ON TABLE  project_dw.dim_season IS 'Competition-season dimension';

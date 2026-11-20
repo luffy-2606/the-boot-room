@@ -267,7 +267,7 @@ BEGIN
 
   -- Final projection: attach form_last_5 string using a sub-window over the
   -- most-recent 5 result characters per team+season up to and including this matchday.
-  SELECT
+  SELECT DISTINCT ON (r.team_key, r.season_key, r.matchday)
     r.team_key,
     r.season_key,
     r.date_key,
@@ -295,6 +295,7 @@ BEGIN
       ''
     )                                                        AS form_last_5
   FROM ranked r
+  ORDER BY r.team_key, r.season_key, r.matchday, r.date_key
   ON CONFLICT (team_key, season_key, matchday) DO UPDATE SET
     league_position = EXCLUDED.league_position,
     points          = EXCLUDED.points;
