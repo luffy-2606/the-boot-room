@@ -1,205 +1,205 @@
 team_id,team_name,team_short_name,country_name
-190,,,Germany
-904,,,Germany
-174,,,Germany
-180,,,Germany
-186,,,Germany
-868,,,Germany
-175,,,Germany
-176,,,Germany
-184,,,Germany
-172,,,Germany
-872,,,Germany
-177,,,Germany
-179,,,Germany
-183,,,Germany
-169,,,Germany
-201,,,Germany
-185,,,Germany
-182,,,Germany
-189,,,Germany
-173,,,Germany
-181,,,Germany
-171,,,Germany
-178,,,Germany
-38,,,Europe
-24,,,Europe
-220,,,Europe
-224,,,Europe
-212,,,Europe
-217,,,Europe
-33,,,Europe
-39,,,Europe
-238,,,Europe
-243,,,Europe
-129,,,Europe
-256,,,Europe
-239,,,Europe
-806,,,Europe
-952,,,Europe
-781,,,South America
-769,,,South America
-2305,,,South America
-3563,,,South America
-783,,,South America
-3564,,,South America
-784,,,South America
-3562,,,South America
-3565,,,South America
-779,,,South America
-3567,,,South America
-1839,,,South America
-794,,,South America
-1833,,,South America
-795,,,South America
-798,,,South America
-788,,,International
-768,,,International
-797,,,International
-785,,,International
-782,,,International
-941,,,International
-778,,,International
-772,,,International
-907,,,International
-777,,,International
-771,,,International
-773,,,International
-2722,,,International
-780,,,International
-4885,,,International
-787,,,International
-789,,,International
-799,,,International
-3566,,,International
-776,,,International
-770,,,International
-786,,,International
-792,,,International
-791,,,International
-790,,,International
-793,,,International
-796,,,International
-774,,,International
-775,,,International
-2721,,,International
-905,,,International
-914,,,International
-17469,,,International
-206,,,Spain
-1049,,,Spain
-209,,,Spain
-218,,,Spain
-422,,,Spain
-221,,,Spain
-222,,,Spain
-902,,,Spain
-213,,,Spain
-216,,,Spain
-207,,,Spain
-210,,,Spain
-901,,,Spain
-552,,,Spain
-215,,,Spain
-1042,,,Spain
-322,,,Spain
-205,,,Spain
-1043,,,Spain
-214,,,Spain
-211,,,Spain
-360,,,Spain
-219,,,Spain
-208,,,Spain
-223,,,Spain
-1041,,,Spain
-373,,,Spain
-403,,,Spain
-395,,,Spain
-1217,,,Spain
-1218,,,Spain
-627,,,Spain
-1219,,,Spain
-1220,,,Spain
-444,,,Spain
-1230,,,Spain
-1036,,,Spain
-608,,,Spain
-131,,,France
-152,,,France
-158,,,France
-137,,,France
-134,,,France
-153,,,France
-147,,,France
-143,,,France
-156,,,France
-145,,,France
-167,,,France
-139,,,France
-138,,,France
-165,,,France
-168,,,France
-136,,,France
-144,,,France
-130,,,France
-133,,,France
-146,,,France
-135,,,France
-141,,,France
-140,,,France
-2736,,,France
-142,,,France
-160,,,France
-1,,,England
-59,,,England
-36,,,England
-26,,,England
-41,,,England
-25,,,England
-22,,,England
-28,,,England
-27,,,England
-37,,,England
-29,,,England
-31,,,England
-23,,,England
-56,,,England
-30,,,England
-40,,,England
-55,,,England
-46,,,England
-105,,,England
-75,,,England
-47,,,England
-101,,,England
-98,,,England
-54,,,England
-328,,,England
-226,,,Italy
-240,,,Italy
-236,,,Italy
-230,,,Italy
-1683,,,Italy
-231,,,Italy
-233,,,Italy
-229,,,Italy
-234,,,Italy
-2256,,,Italy
-228,,,Italy
-291,,,Italy
-241,,,Italy
-227,,,Italy
-290,,,Italy
-232,,,Italy
-912,,,Europe
-916,,,Europe
-944,,,Europe
-915,,,Europe
-2138,,,Europe
-909,,,Europe
-911,,,Europe
-908,,,Europe
-942,,,Europe
-906,,,Europe
-2358,,,Europe
-1835,,,Europe
+190,Union Berlin,,Germany
+904,Bayer Leverkusen,,Germany
+174,VfB Stuttgart,,Germany
+180,Borussia Dortmund,,Germany
+186,FC Köln,,Germany
+868,Bochum,,Germany
+175,Hoffenheim,,Germany
+176,Werder Bremen,,Germany
+184,Eintracht Frankfurt,,Germany
+172,Augsburg,,Germany
+872,Darmstadt 98,,Germany
+177,FSV Mainz 05,,Germany
+179,Wolfsburg,,Germany
+183,Freiburg,,Germany
+169,Bayern Munich,,Germany
+201,FC Heidenheim,,Germany
+185,Borussia Mönchengladbach,,Germany
+182,RB Leipzig,,Germany
+189,Ingolstadt,,Germany
+173,Hertha Berlin,,Germany
+181,Schalke 04,,Germany
+171,Hamburger SV,,Germany
+178,Hannover 96,,Germany
+38,Tottenham Hotspur,,England
+24,Liverpool,,England
+220,Real Madrid,,Spain
+224,Juventus,,Italy
+212,Atlético Madrid,,Spain
+217,Barcelona,,Spain
+33,Chelsea,,England
+39,Manchester United,,England
+238,Inter Milan,,Italy
+243,AC Milan,,Italy
+129,AS Monaco,,Monaco
+256,FC Porto,,Portugal
+239,Fiorentina,,Italy
+806,Ajax,,Netherlands
+952,Panathinaikos,,Greece
+781,Brazil,,Brazil
+769,Colombia,,Colombia
+2305,Jamaica,,Jamaica
+3563,Venezuela,,Venezuela (Bolivarian Republic)
+783,Uruguay,,Uruguay
+3564,Bolivia,,Bolivia
+784,Peru,,Peru
+3562,Chile,,Chile
+3565,Ecuador,,Ecuador
+779,Argentina,,Argentina
+3567,Paraguay,,Paraguay
+1839,United States,,United States of America
+794,Mexico,,Mexico
+1833,Canada,,Canada
+795,Costa Rica,,Costa Rica
+798,Panama,,Panama
+788,Morocco,,Morocco
+768,England,,England
+797,Iran,,"Iran, Islamic Republic of"
+785,Croatia,,Croatia
+782,Belgium,,Belgium
+941,Netherlands,,Netherlands
+778,Japan,,Japan
+772,Spain,,Spain
+907,Wales,,Wales
+777,Tunisia,,Tunisia
+771,France,,France
+773,Switzerland,,Switzerland
+2722,Cameroon,,Cameroon
+780,Portugal,,Portugal
+4885,Ghana,,Ghana
+787,Senegal,,Senegal
+789,Poland,,Poland
+799,Saudi Arabia,,Saudi Arabia
+3566,Qatar,,Qatar
+776,Denmark,,Denmark
+770,Germany,,Germany
+786,Serbia,,Serbia
+792,Australia,,Australia
+791,South Korea,,Korea (South)
+790,Sweden,,Sweden
+793,Iceland,,Iceland
+796,Russia,,Russia
+774,Egypt,,Egypt
+775,Nigeria,,Nigeria
+2721,German DR,,International
+905,Romania,,Romania
+914,Italy,,Italy
+17469,Czechoslovakia,,Czech Republic
+206,Deportivo Alavés,,Spain
+1049,Granada,,Spain
+209,Celta Vigo,,Spain
+218,Real Betis,,Spain
+422,Osasuna,,Spain
+221,Levante UD,,Spain
+222,Villarreal,,Spain
+902,Huesca,,Spain
+213,Sevilla,,Spain
+216,Getafe,,Spain
+207,Valencia,,Spain
+210,Real Sociedad,,Spain
+901,Real Valladolid,,Spain
+552,Cádiz,,Spain
+215,Athletic Club,,Spain
+1042,Elche,,Spain
+322,Eibar,,Spain
+205,Leganés,,Spain
+1043,Mallorca,,Spain
+214,Espanyol,,Spain
+211,Girona,,Spain
+360,Rayo Vallecano,,Spain
+219,RC Deportivo La Coruña,,Spain
+208,Las Palmas,,Spain
+223,Málaga,,Spain
+1041,Sporting Gijón,,Spain
+373,Córdoba CF,,Spain
+403,Almería,,Spain
+395,Real Zaragoza,,Spain
+1217,Racing Santander,,Spain
+1218,Hércules,,Spain
+627,Tenerife,,Spain
+1219,Xerez,,Spain
+1220,Recreativo Huelva,,Spain
+444,CD Numancia de Soria,,Spain
+1230,Real Murcia CF,,Spain
+1036,Gimnàstic Tarragona,,Spain
+608,Albacete,,Spain
+131,Paris Saint-Germain,,France
+152,Clermont Foot,,France
+158,AC Ajaccio,,France
+137,Lyon,,France
+134,Rennes,,France
+153,Stade Brestois,,France
+147,Olympique de Marseille,,France
+143,Lille,,France
+156,Stade de Reims,,France
+145,Angers,,France
+167,Auxerre,,France
+139,Montpellier,,France
+138,Strasbourg,,France
+165,Lorient,,France
+168,Lens,,France
+136,OGC Nice,,France
+144,Nantes,,France
+130,Toulouse,,France
+133,Troyes,,France
+146,Bordeaux,,France
+135,Saint-Étienne,,France
+141,Metz,,France
+140,Stade Malherbe Caen,,France
+2736,Bastia,,France
+142,Guingamp,,France
+160,Gazélec Ajaccio,,France
+1,Arsenal,,England
+59,Aston Villa,,England
+36,Manchester City,,England
+26,Swansea City,,Wales
+41,Sunderland,,England
+25,Southampton,,England
+22,Leicester City,,England
+28,AFC Bournemouth,,England
+27,West Bromwich Albion,,England
+37,Newcastle United,,England
+29,Everton,,England
+31,Crystal Palace,,England
+23,Watford,,England
+56,Norwich City,,England
+30,Stoke City,,England
+40,West Ham United,,England
+55,Fulham,,England
+46,Wolverhampton Wanderers,,England
+105,Portsmouth,,England
+75,Charlton Athletic,,England
+47,Middlesbrough,,England
+101,Leeds United,,England
+98,Blackburn Rovers,,England
+54,Birmingham City,,England
+328,Bolton Wanderers,,England
+226,Hellas Verona,,Italy
+240,Bologna,,Italy
+236,Lazio,,Italy
+230,Udinese,,Italy
+1683,Carpi,,Italy
+231,Chievo,,Italy
+233,Genoa,,Italy
+229,AS Roma,,Italy
+234,Sampdoria,,Italy
+2256,Palermo,,Italy
+228,Atalanta,,Italy
+291,Frosinone,,Italy
+241,Torino,,Italy
+227,Napoli,,Italy
+290,Empoli,,Italy
+232,Sassuolo,,Italy
+912,Czech Republic,,Czech Republic
+916,Hungary,,Hungary
+944,Slovenia,,Slovenia
+915,Austria,,Austria
+2138,Georgia,,Georgia
+909,Turkey,,Turkey
+911,Ukraine,,Ukraine
+908,Slovakia,,Slovakia
+942,Scotland,,Scotland
+906,Albania,,Albania
+2358,North Macedonia,,"Macedonia, Republic of"
+1835,Finland,,Finland
