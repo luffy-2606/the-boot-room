@@ -51,6 +51,11 @@ TITLE_CASE_FIELDS = {
     "country_name", "competition_name",
 }
 
+# ─── Fields that are genuinely boolean (never normalise numeric IDs as bools) ─
+BOOLEAN_FIELDS = {
+    "is_starter", "competition_youth", "competition_international",
+}
+
 # ─── Boolean normalisation map ───────────────────────────────────────────────
 _TRUE_VALUES  = {"true", "1"}
 _FALSE_VALUES = {"false", "0"}
@@ -121,8 +126,8 @@ def clean_row(row: dict) -> dict:
         if isinstance(value, str):
             value = value.strip()
 
-        # 2. Empty string → None (→ NULL in PostgreSQL)
-        if value == "":
+        # 2. Empty / None-string → None (→ NULL in PostgreSQL)
+        if value == "" or value.lower() in ("none", "null", "nan"):
             cleaned[key] = None
             continue
 
@@ -130,8 +135,8 @@ def clean_row(row: dict) -> dict:
         if key in TITLE_CASE_FIELDS and isinstance(value, str):
             value = value.title()
 
-        # 4. Normalise boolean-like strings
-        if isinstance(value, str):
+        # 4. Normalise boolean-like strings (only real boolean columns)
+        if key in BOOLEAN_FIELDS and isinstance(value, str):
             value = _normalise_bool(value)
 
         cleaned[key] = value

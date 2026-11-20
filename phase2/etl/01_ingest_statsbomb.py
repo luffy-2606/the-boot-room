@@ -143,13 +143,13 @@ for _, cs_row in comps.iterrows():
         mid     = int(m["match_id"])
         home_id = int(m.get("home_team_id", 0) or 0)
         away_id = int(m.get("away_team_id", 0) or 0)
-        home_name = m.get("home_team_name", "") or ""
-        away_name = m.get("away_team_name", "") or ""
+        home_name = m.get("home_team", "") or ""
+        away_name = m.get("away_team", "") or ""
 
         # Teams
         for tid, tname, tshort, tcountry in [
-            (home_id, home_name, m.get("home_team_short_name",""), cs_row["country_name"]),
-            (away_id, away_name, m.get("away_team_short_name",""), cs_row["country_name"]),
+            (home_id, home_name, m.get("home_team_short_name",""), m.get("home_team_country_name","")),
+            (away_id, away_name, m.get("away_team_short_name",""), m.get("away_team_country_name","")),
         ]:
             if tid and tid not in team_dict:
                 team_dict[tid] = {"team_id": tid, "team_name": tname,
@@ -267,8 +267,8 @@ save_csv(list(player_dict.values()), DATA_DIR / "players.csv", PLAYER_FIELDS)
 print()
 print("=" * 55)
 print("StatsBomb ingestion (matches + lineups + players) done.")
-match_count = sum(1 for _ in open(DATA_DIR / "matches.csv")) - 1
-lineup_count = sum(1 for _ in open(DATA_DIR / "lineups.csv")) - 1
+match_count = sum(1 for _ in open(DATA_DIR / "matches.csv", encoding="utf-8")) - 1
+lineup_count = sum(1 for _ in open(DATA_DIR / "lineups.csv", encoding="utf-8")) - 1
 print(f"  competitions : {len(comp_rows):>6,}")
 print(f"  seasons      : {len(season_rows):>6,}")
 print(f"  teams        : {len(team_dict):>6,}")
